@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finch"
+version = "0.1.0"
+description = "Agent profiles and prompt rubrics kept as YAML data, plus the small API that builds model messages from them."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Sakir Cimen" }]
+keywords = ["prompt-engineering", "prompts", "ai-agents", "llm", "yaml", "kutai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Framework :: AsyncIO",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml",
+]
+
+[project.urls]
+Homepage = "https://github.com/msakirc/finch"
+Repository = "https://github.com/msakirc/finch"
+Monorepo = "https://github.com/msakirc/kutai/tree/main/packages/finch"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+finch = ["profiles/*.yaml", "rubrics/*.yaml"]
